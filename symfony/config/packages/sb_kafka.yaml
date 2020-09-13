@@ -1,0 +1,14 @@
+sb_kafka:
+    producers:
+        configuration:
+            log.connection.close: 'false'
+            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'
+            queue.buffering.max.messages: 10000000
+
+    consumers:
+        configuration:
+            group.id: 'main_group'
+            log.connection.close: 'false'
+            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'
+            enable.auto.commit: 'true'
+            auto.offset.reset: 'smallest' #if you want to start reading from the beginning if there is no offset
