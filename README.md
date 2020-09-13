@@ -27,7 +27,7 @@ php symfony/bin/console
 and execute the command of your choice.
 
 
-Possible kafka configuration:
+### Kafka configuration:
 ```
 https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md
 ```
